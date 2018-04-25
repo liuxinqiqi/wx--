@@ -1,8 +1,21 @@
- <view>test页面</view>
+<view>test页面</view>
 <view>你好呀，亲爱的{{name}}</view>
 <view>密码是：{{pass}}</view>
- <button bindtap="toIndex">跳转到navi页面</button>  
+<button bindtap="toIndex">跳转到navi页面</button>
 <!-- <navigator hover-class='active' url='../navi/navi'>跳转到navi页面</navigator> -->
 <!-- 在navigator中添加redirect="true"属性，跳转后没有返回页面 -->
 <button bindtap='say'>触发sayHello</button>
-<view id= 'item-{{id}}' > 我是item - 0(在控制台的wxml下查看本view的id是否为‘item - 0’) </view>
+<view id= 'item-{{id}}' > 我是item - 0</view>
+
+
+<!--  条件渲染  -->
+<button bindtap='show'>点击显示/隐藏</button>
+<view wx:if="{{false}}"> 不显示条件渲染 </view>
+<view wx:if="{{true}}"> 显示条件渲染 </view>
+<view wx:if="{{bol}}"> 显示条件渲染（bol为true） </view>
+<view wx:if="{{bol1}}">不显示条件渲染(bol1为false)</view>
+
+<!--  条件判断  -->
+<view wx:if="{{id==1}}">第一条</view>
+<view wx:elif="{{id>1}}">大于第一条的</view>
+<view wx:else="{{id>7}}">我是第七条</view>

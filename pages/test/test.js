@@ -12,7 +12,15 @@ Page({
   data: {
     name: 'lxq',
     pass: null,
-    id: 0
+    id: 8,
+    bol: true,
+    bol1: false
+  },
+  show: function(){
+    // var bol = this.data.bol;
+    this.setData({
+      bol: !this.data.bol
+    });
   },
   say: function () {
     console.log(this.data.name);
