@@ -1,0 +1,1 @@
+console.log("我是common.js 依赖的a.js文件")
