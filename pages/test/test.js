@@ -11,7 +11,8 @@ Page({
    */
   data: {
     name: 'lxq',
-    pass: null
+    pass: null,
+    id: 0
   },
   say: function () {
     console.log(this.data.name);
